@@ -55,6 +55,7 @@ function yes() {
     document.querySelector(".button-container").style.display = "none"; // Hide buttons
     startHeartAnimation();
 
+    document.getElementById("valentine-img").src = "kissy_bears.gif"; 
     // Confetti effect
     confetti({
         particleCount: 150,
@@ -82,17 +83,3 @@ function startHeartAnimation() {
     }, 300);
 }
 
-function typeText(element, text, speed = 50, callback = null) {
-    element.innerHTML = "";
-    let i = 0;
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text[i];
-            i++;
-            setTimeout(type, speed);
-        } else if (callback) {
-            callback();
-        }
-    }
-    type();
-}
