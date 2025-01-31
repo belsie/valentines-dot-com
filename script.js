@@ -39,6 +39,7 @@ function next() {
 var noClickCount = 0;
 function no() {
     let noButton = document.getElementById("no");
+    noClickCount++;
 
     if (noClickCount >= 10) {
         document.body.innerHTML = "<h1 style='color: white; font-size: 3rem;'>aw :(</h1>"; 
